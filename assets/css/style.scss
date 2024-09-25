@@ -1,0 +1,196 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+$electric-blue: #0c2ec7;
+$electric-blue-light: #b6702b;
+$elctric-blue-dark: #0c1f75;
+
+body {
+  text-align: justify;
+  overflow-x: hidden;
+}
+
+.page-header {
+  background-color: $electric-blue;
+  background-image: linear-gradient(120deg, $electric-blue, $electric-blue-light);
+  border-bottom: thin solid white;
+  color: white;
+}
+
+.main-content {
+  h1, h2, h3, h4 {
+    text-align: left;
+    color: $elctric-blue-dark ;
+    background-color: white;
+    border-radius: 5px;
+    width: fit-content;
+    margin-right: 0px;
+    // margin-right: auto;
+    padding: 0 10px;
+  }
+  h1 {
+    font-weight: bold;
+  }
+}
+
+// .main-content {
+//   table, img, iframe, > video {
+//     display: block;
+//     background-color: white;
+//     border-radius: 15px;
+//     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+//     width: 90%;
+//     margin: auto;
+//     max-width: fit-content;
+//   }
+//   video {
+//     display: block;
+//   }
+// }
+
+// .main-content .full-width {
+//   max-width: unset;
+//   width: -webkit-fill-available;
+//   width: -moz-available;
+//   * {
+//     width: 100%;
+//   }
+// }
+
+// p {
+//   > img, > video, > iframe, > table {
+//     // -webkit-filter: drop-shadow(0px 0px 5px white);
+//     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+//   }
+//   > img {
+//     padding: 10px;
+//   }
+// }
+
+// .main-content .tableFixHead {
+//   overflow-y: auto;
+//   max-height: 70vh;
+//   thead th {
+//     position: sticky;
+//     top: 0;
+//     border-top: none !important; // avoids text bleeding behind sticky cell
+//     z-index: 7;
+//     // avoids highlighted rows bleeding in
+//     border-left: 0px; border-right: 0px;
+//   }
+// }
+
+// .tableFixFirstColumn {
+//   overflow-x: auto;
+//   height: fit-content;
+
+//   @media screen and (min-width: 500px) {
+//     & tbody th, & thead th:first-of-type {
+//       position: sticky;
+//       left: 0;
+//       border-left: none !important; // avoids text bleeding behind sticky cell
+//     }
+//   }
+
+//   & tbody th {
+//     z-index: 5;
+//   }
+
+//   & thead th:first-of-type {
+//     z-index: 10;
+//   }
+// }
+
+// .tableDoubleRows {
+//   tr:nth-of-type(2n) {
+//     border-bottom: medium solid $lavender-dark-grey;
+//   }
+// }
+
+// th, td {
+//   text-align: center;
+
+//   & img {
+//     margin: auto;
+//     min-width: 100px;
+
+//     @media screen and (max-width: 42em) {
+//       max-height: 15vh;
+//     }
+//   }
+// }
+
+// th {
+//   background:#eee;
+//   z-index: 1;
+// }
+
+// .main-content table.spectrograms-table tbody {
+//   td {
+//     height: 170px;
+//   }
+// }
+
+// .main-content name-and-audio {
+//   height: 100%;
+//   width: 100%;
+//   display: grid;
+//   justify-items: center;
+//   align-items: center;
+//   grid-template-rows: 50% 50%;
+//   &, * {
+//     margin: auto;
+//     // required to overwrite rule in GitHub-Pages Cayman theme
+//     margin-top: auto !important;
+//     border: none;
+//   }
+// }
+
+
+// .main-content table td {
+//   padding: 0.5rem 1rem;
+//   border: 1px solid #e9ebec;
+// }
+
+// .main-content table th {
+//   padding: 0.5rem 1rem;
+//   border: 1px solid #e9ebec;
+// }
+
+// .highlight {
+//   z-index: -1;
+//   background: rgb(186, 219, 230);
+
+//   &.wrong {
+//     background: rgb(252, 155, 179);
+//   }
+// }
+
+// audio {
+//   width: 130px;
+// }
+
+// td {
+//   img, audio {
+//     display: block;
+//   }
+// }
+
+// .main-content > audio {
+//   width: 33.3%;
+//   margin-left: 33.3%;
+// }
+
+// .full-size-image {
+//   @media screen and (min-width: 64em) {
+//     width: 80vw !important;
+//     margin-left: calc(-40vw + 50%);
+//   }
+// }
+
+// body {
+//   background-color: $lavender-very-light-grey;
+// }
+
