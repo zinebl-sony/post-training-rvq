@@ -3,13 +3,12 @@ github: [metadata]
 
 remote_theme: pages-themes/cayman@v0.2.0
 baseurl: https://github.com/zinebl-sony/post-training-rvq
+repository: zinebl-sony/post-training-rvq
 
-# markdown: kramdown
-# kramdown:
-#     math_engine: katex
-#     syntax_highlighter: rougify
-markdown: GFM
+markdown: kramdown
+kramdown:
+    math_engine: katex
+    syntax_highlighter: rougify
 
 plugins:
-    - jemoji
     - jekyll-remote-theme
