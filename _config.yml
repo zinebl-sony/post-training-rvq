@@ -1,10 +1,9 @@
-title: Challenging Common Practices In Vector Quantized Neural Audio Compression
+title: "QinCodec: Neural Audio Compression with Implicit Neural Codebooks"
 github: [metadata]
 
 remote_theme: pages-themes/cayman@v0.2.0
 baseurl: https://github.com/zinebl-sony/post-training-rvq
 
-gem "github-pages", group: :jekyll_plugins
 markdown: kramdown
 kramdown:
     math_engine: katex

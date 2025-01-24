@@ -1,6 +1,6 @@
 ---
-title: Challenging Common Practices In Vector Quantized Neural Audio Compression
-description: Zineb Lahrichi, Gaëtan Hadjeres, Gaël Richard, Geoffroy Peeters
+title: "QinCodec: Neural Audio Compression with Implicit Neural Codebooks"
+description: anonymous
 layout: default
 ---
 
