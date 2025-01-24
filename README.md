@@ -1,1 +1,1 @@
-This repository hosts the GitHub Pages site for our submitted paper : "Challenging Common Practices In Vector-Quantized Neural Audio Compression"
+This repository hosts the GitHub Pages site for our submitted paper : "QinCodec: Neural Audio Compression with Implicit Neural Codebooks"
