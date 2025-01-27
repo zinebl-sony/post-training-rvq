@@ -1,5 +1,5 @@
 ---
-title: "QinCodec: Neural Audio Compression with Implicit Neural Codebooks
+title: "QinCodec: Neural Audio Compression with Implicit Neural Codebooks"
 description: Anonymous
 layout: default
 ---
