@@ -1,6 +1,5 @@
 ---
 title: "QinCodec: Neural Audio Compression with Implicit Neural Codebooks"
-description: Anonymous
 layout: default
 ---
 
@@ -31,11 +30,11 @@ quantized representations</figcaption>
 
 # Experiments and results
 
-The table below presents audio clips to evaluate the reconstruction quality after training the continuous model and after the post-training quantization stage, without any finetuning.
+The tables below provide audio clips for evaluating the reconstruction quality of our model in comparison to the baselines presented in the paper. Some differences between audio samples may be subtle, so we recommend using headphones for an accurate assessment.
 
-{% assign audio_ids = "PLHXGDnig4M, YQSuFyFm3Lc, DlWd7Wmdi1E, yfYNPWs7mWY, u84FiZ_omhA, sVYTOURVsQ0, GOD8Bt5LfDE" | split: ", " %}
+{% assign audio_ids = "0050, 0209, 0526, 0530, 0626, 0808" | split: ", " %}
 {% assign formats = "wav" | split: ", " %}
-{% assign image_audio_ids = "PLHXGDnig4M, YQSuFyFm3Lc" | split: ", " %}
+{% assign image_audio_ids = "0050, 0209" | split: ", " %}
 
 ## Comparison with baselines, at 16kbps
 
@@ -49,7 +48,6 @@ The table below presents audio clips to evaluate the reconstruction quality afte
 <thead>
 <tr class="header">
 <th> Original </th>
-<th> Reconstruction (Continuous) </th>
 <th> Qincodec </th>
 <th> DAC </th>
 <th> Encodec </th>
@@ -57,15 +55,15 @@ The table below presents audio clips to evaluate the reconstruction quality afte
 </tr>
 </thead>
 <tbody>
-{% assign characters = "continuous, 16kbps-finetuned, e2e1, e2e2" | split: ", " %}
+{% assign characters = "src, qincodec16kbps, descript16kbps, encodec16kbps" | split: ", " %}
 {% for audio_id in audio_ids %}
     <tr>
         {% for char in characters %}
         <td>
             <audio controls preload='metadata'>
                 {% for format in formats %}
-                    <source src="{{ site.baseurl }}/assets/audio/{{ audio_id }}_{{ char }}.{{ format }}" 
-                            alt="{{ audio_id }}_{{ char }}" 
+                    <source src="{{ site.baseurl }}/assets/audio/audio{{ audio_id }}-{{ char }}.{{ format }}" 
+                            alt="audio{{ audio_id }}_{{ char }}" 
                             type="audio/{{ format }}">
                 {% endfor %}
             </audio>
@@ -77,7 +75,7 @@ The table below presents audio clips to evaluate the reconstruction quality afte
 </table>
 </div>
 
-## Dynamic bitrate
+## Comparison with baselines, at 8kbps
 
 <div markdown="0">
 <table class="tableFixHead tableDoubleRows audio-table">
@@ -89,39 +87,33 @@ The table below presents audio clips to evaluate the reconstruction quality afte
 <thead>
 <tr class="header">
 <th> Original </th>
-<th> Reconstruction (Continuous)</th>
-<th>24 kbps</th>
-<th>16 kbps</th>
-<th>10 kbps</th>
-<th>3 kbps</th>
+<!-- <th> Reconstruction (Continuous) </th> -->
+<th> Qincodec </th>
+<th> DAC </th>
+<th> Encodec </th>
+
 </tr>
 </thead>
 <tbody>
-{% assign characters = "original, continuous, 24kbps, 16kbps, 10kbps, 3kbps" | split: ", " %}
-
+{% assign characters = "src, qincodec8kbps, descript8kbps, encodec8kbps" | split: ", " %}
 {% for audio_id in audio_ids %}
     <tr>
         {% for char in characters %}
         <td>
             <audio controls preload='metadata'>
                 {% for format in formats %}
-                    <source src="{{ site.baseurl }}/assets/audio/{{ audio_id }}_{{ char }}.{{ format }}" 
-                            alt="{{ audio_id }}_{{ char }}" 
-                            type="audio/{{ format }}">                    
+                    <source src="{{ site.baseurl }}/assets/audio/audio{{ audio_id }}-{{ char }}.{{ format }}" 
+                            alt="audio{{ audio_id }}_{{ char }}" 
+                            type="audio/{{ format }}">
                 {% endfor %}
             </audio>
-            {% if image_audio_ids contains audio_id %}
-                <img src="{{ site.baseurl }}/assets/images/spectrograms/{{ audio_id }}/{{ char }}.PNG" alt="/assets/images/{{ audio_id }}/{{ char }}.PNG"  width="300" height="150"/>
-            {% endif %}
         </td>
         {% endfor %}
     </tr>
 {% endfor %}
 </tbody>
-</table>  
+</table>
 </div>
-
-
 
 ## Impact of finetuning
 
@@ -134,13 +126,13 @@ The table below presents audio clips to evaluate the reconstruction quality afte
 </colgroup>
 <thead>
 <tr class="header">
-<th> Reconstruction (Continuous) </th>
-<th> QinCodec (w/o finetuning) </th>
+<th> Original </th>
 <th> QinCodec </th>
+<th> QinCodec (w/o finetuning) </th>
 </tr>
 </thead>
 <tbody>
-{% assign characters = "continuous, 16kbps, 16kbps-finetuned" | split: ", " %}
+{% assign characters = "src, qincodec16kbps, qincodec16kbps_nofinetune" | split: ", " %}
 {% for audio_id in audio_ids %}
     <tr>
         {% for char in characters %}
@@ -148,13 +140,13 @@ The table below presents audio clips to evaluate the reconstruction quality afte
             <audio controls preload='metadata'>
                 {% for format in formats %}
                     <!-- <source src="{{ site.baseurl }}/assets/audio/{{ audio_id }}_{{ char }}.{{ format }}"  -->
-                    <source src="{{ site.baseurl }}/assets/audio/{{ audio_id }}_{{ char }}.{{ format }}" 
-                            alt="{{ audio_id }}_{{ char }}" 
+                    <source src="{{ site.baseurl }}/assets/audio/audio{{ audio_id }}-{{ char }}.{{ format }}" 
+                            alt="audio{{ audio_id }}_{{ char }}" 
                             type="audio/{{ format }}">
                 {% endfor %}
             </audio>
             {% if image_audio_ids contains audio_id %}
-                <img src="{{ site.baseurl }}/assets/images/spectrograms/{{ audio_id }}/{{ char }}.PNG" alt="spec_{ audio_id }}_{{ char }}"  width="300" height="150"/>
+                <img src="{{ site.baseurl }}/assets/images/spectrograms/audio{{ audio_id }}/{{ char }}.PNG" alt="spec_{ audio_id }}_{{ char }}"  width="300" height="150"/>
             {% endif %}
         </td>
         {% endfor %}
