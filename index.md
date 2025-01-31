@@ -145,9 +145,9 @@ The tables below provide audio clips for evaluating the reconstruction quality o
                             type="audio/{{ format }}">
                 {% endfor %}
             </audio>
-            {% if image_audio_ids contains audio_id %}
-                <img src="{{ site.baseurl }}/assets/images/spectrograms/audio{{ audio_id }}/{{ char }}.PNG" alt="spec_{ audio_id }}_{{ char }}"  width="300" height="150"/>
-            {% endif %}
+            <!-- {% if image_audio_ids contains audio_id %} -->
+                <!-- <img src="{{ site.baseurl }}/assets/images/spectrograms/audio{{ audio_id }}/{{ char }}.PNG" alt="spec_{ audio_id }}_{{ char }}"  width="300" height="150"/> -->
+            <!-- {% endif %} -->
         </td>
         {% endfor %}
     </tr>
