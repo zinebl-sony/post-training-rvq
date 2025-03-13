@@ -2,8 +2,8 @@ title: "QinCodec: Neural Audio Compression with Implicit Neural Codebooks"
 github: [metadata]
 
 remote_theme: pages-themes/cayman@v0.2.0
-url: https://accompanying-website.xyz # https://github.com/zinebl-sony/post-training-rvq\
-baseurl: ""
+# url: https://accompanying-website.xyz # https://github.com/zinebl-sony/post-training-rvq\
+baseurl: https://github.com/zinebl-sony/post-training-rvq
 repository: zinebl-sony/post-training-rvq
 
 markdown: kramdown
